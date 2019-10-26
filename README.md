@@ -1,2 +1,2 @@
-# Example Repository
-This is a sample repo, hello, coders!
+# codeHub Repository
+You're welcome to my code repo
