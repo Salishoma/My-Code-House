@@ -1,3 +1,4 @@
+//checking if there are duplicates
 function areThereDuplicates(...arr) {
     let x = arr.sort()
     let j = 0;

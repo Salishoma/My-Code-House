@@ -1,3 +1,4 @@
+//Tracing path of connection from one vertex to the other
 class Graph{
     constructor(){
         this.adjacencyList = {};

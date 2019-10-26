@@ -1,3 +1,4 @@
+//Making parent vertex to be above child vertex
 class MaxBinaryHeap{
     constructor(){
         this.values = [];

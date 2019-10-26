@@ -1,3 +1,4 @@
+//checking shortest paths between two points
 class WeightedGraph{
     constructor(){
         this.adjacencyList = {};

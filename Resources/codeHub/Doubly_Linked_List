@@ -1,3 +1,4 @@
+//push, pop, shift, unshift etc. with nodes pointing both forward and backward
 class Node{
     constructor(val){
         this.val = val;

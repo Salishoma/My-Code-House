@@ -1,3 +1,5 @@
+//arranging numbers in increasing order of magnitude
+
 function insertionSort(arr){
     for(var i = 1; i < arr.length; i++){
         var currentVal = arr[i];

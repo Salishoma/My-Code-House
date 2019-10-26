@@ -1,3 +1,5 @@
+//checking if average of two values in a sorted array gives exact value in the 2nd argument 
+
 function averagePair(arr, avg){
     let x = 0;
     let y = arr.length - 1;
