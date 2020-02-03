@@ -1,4 +1,5 @@
 //longest number of characters in a string before repetition of any character
+
 function findLongestSubstring(str) {
   let longest = 0;
   let seen = {};
