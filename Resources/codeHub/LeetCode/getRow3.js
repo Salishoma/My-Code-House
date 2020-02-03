@@ -1,4 +1,4 @@
-var getRow = function(rowIndex) {
+varvar getRow = function(rowIndex) {
     const arr = Array(rowIndex + 1).fill(1)
     let copy, useCopy
     
