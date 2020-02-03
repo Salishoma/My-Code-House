@@ -1,5 +1,5 @@
 //placing value in a tree structure with lesser value at down left of parent and higher value at down right of parent
-```
+
 class Node{
     constructor(value){
         this.value = value;
@@ -107,4 +107,4 @@ tree.insert(3)
 tree.insert(8)
 tree.insert(20)
 tree.DFSPostOrder()
-```
+
