@@ -13,7 +13,7 @@ var oddCells = function(n, m, indices) {
         for(let j = 0; j < m; j++)
             arr[i].push(0);
     } 
-    for(let [r, c] of indices){
+    for(const [r, c] of indices){
         let j = 0, k = 0
         while(j < m){
             arr[r][j]++;
@@ -26,7 +26,7 @@ var oddCells = function(n, m, indices) {
     }
     arr = [].concat(...arr);
     let res = 0;
-    for(let c of arr){
+    for(const c of arr){
         if(c % 2 !== 0) res++;
     }
     return res;
