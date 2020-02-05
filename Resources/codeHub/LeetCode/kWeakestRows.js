@@ -12,13 +12,11 @@ var kWeakestRows = function(mat, k) {
         let count = 0;
         for(let j = 0; j < mat[0].length; j++){
             if(mat[i][j] === 1) count++
+            else if(mat[i][0] !== 0) break;
         }
         if(res[count] === undefined) res[count] = []
         res[count].push(i);
     } 
-    for(let i = 0; i < res.length; i++){
-        if(res[i] !== undefined) res[i].sort((a, b) => a - b)
-    }
     res = [].concat(...res).filter(a => a !== undefined)
     res.length = k;
     return res;
