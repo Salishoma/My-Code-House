@@ -17,12 +17,12 @@ MagicDictionary.prototype.buildDict = function(dict) {
  * @return {boolean}
  */
 MagicDictionary.prototype.search = function(word) {
-    for(let i = 0; i < this.dict.length; i++){
+    for(let dict of this.dict){
         let count = 0;
-        if(word === this.dict[i]) continue;
-        if(word.length === this.dict[i].length){
-            for(let j = 0; j < this.dict[i].length; j++){
-                if(word[j] !== this.dict[i][j]) count++;
+        if(word === dict) continue;
+        if(word.length === dict.length){
+            for(let j = 0; j < dict.length; j++){
+                if(word[j] !== dict[j]) count++;
                 if(count > 1) break;
             }
             if(count === 1) return true;
