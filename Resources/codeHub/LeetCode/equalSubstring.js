@@ -14,11 +14,9 @@ var equalSubstring = function(s, t, maxCost) {
     let arr = [];
     let count = 0;
     let sum = 0;
-    for(let i = 0; i < s.length; i++){
-        arr[i] = Math.abs(s[i].charCodeAt(0) - t[i].charCodeAt(0));
-    }
     let j = 0;
     for(let i = 0; i < s.length; i++){
+        arr[i] = Math.abs(s[i].charCodeAt(0) - t[i].charCodeAt(0));
         sum += arr[i];
         if(sum <= maxCost) count++;
         else{
