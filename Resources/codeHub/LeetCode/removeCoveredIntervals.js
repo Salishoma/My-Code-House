@@ -7,10 +7,7 @@ LeetCode: 1288. Remove Covered Intervals
 */
 
 var removeCoveredIntervals = function(intervals) {
-    intervals.sort((a, b) => {
-        if(a[0] !== b[0]) return a[0] - b[0];
-        else return a[1] - b[1];
-    });
+    intervals.sort((a, b) => a[0] === b[0] ? a[1] - b[1] : a[0] - b[0]);
     let count = 0;
     let num = intervals[0]
     for(let i = 1; i < intervals.length; i++){
