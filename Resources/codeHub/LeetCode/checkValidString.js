@@ -11,8 +11,8 @@ LeetCode: 678. Valid Parenthesis String
 */
 
 var checkValidString = function(s) {
-    let res = [];
-    let arrRes = [];
+    const res = [];
+    const arrRes = [];
     for(let i = 0; i < s.length; i++){
         if(s[i] === "(") arrRes.push(i);
         else if(s[i] === ")"){
