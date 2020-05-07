@@ -7,7 +7,7 @@ LeetCode: 1222. Queens That Can Attack the King
 */
 
 var queensAttacktheKing = function(queens, king) {
-    const arr = Array.from({length: 8}, () => [0,0,0,0,0,0,0,0]);
+    const arr = Array.from({length: 8}, () => Array(8).fill(0));
     const res = [];
     for(let i = 0; i < queens.length; i++){
         arr[queens[i][0]][queens[i][1]] = 1;
