@@ -9,7 +9,7 @@ LeetCode: 1233. Remove Sub-Folders from the Filesystem
 */
 
 var removeSubfolders = function(folder) {
-    folder.sort((a, b) => a.localeCompare(b));
+    folder.sort();
     const path = [folder[0]];
     let parent = folder[0];
     for(let i = 1; i < folder.length; i++){
