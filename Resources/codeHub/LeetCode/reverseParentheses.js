@@ -12,19 +12,17 @@ var reverseParentheses = function(s) {
     if(!s) return ""
     if(!s.includes("(") || !s.includes(")")) return s
     const index = [];
-    let j = 0;
     let split = s.split('');
     for(let i = 0; i < split.length; i++){
         if(split[i] === '('){
             index.push(i);
-        }
-        else if(split[i] === ')'){
-            let str1 = split.slice(index[j], i).reverse();
-            let str2 = split.slice(i)
+        }else if(split[i] === ')'){
+            const j = index.length - 1;
+            const str1 = split.slice(index[j], i).reverse();
+            const str2 = split.slice(i)
             split = split.slice(0, index[j]).concat(str1, str2)
             index.pop()
         }
-        j = index.length - 1;
     }
     return split.join("").replace(/\)/g,"").replace(/\(/g,"");
 };
