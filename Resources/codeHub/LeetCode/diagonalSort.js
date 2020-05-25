@@ -6,27 +6,26 @@ LeetCode: 1329. Sort the Matrix Diagonally
 
 var diagonalSort = function(mat) {
     for(let i = 0; i < mat[0].length; i++){
-        diagonal(mat,0,i,0,i, true)
+        diagonal(mat,0,i)
     }
     for(let i = 1; i < mat.length; i++){
-        diagonal(mat,i,0,i,0,false)
+        diagonal(mat,i,0)
     }
     return mat
 };
-const diagonal = (mat,r,c,i,j,side) => {
-    let arr = [];
+const diagonal = (mat,i,j) => {
+    let r = i;
+    let c = j
+    const arr = [];
     while(r < mat.length && c < mat[0].length){
-        arr.push(mat[r][c]);
-        r++;
-        c++;
+        arr.push(mat[r++][c++]);
     }
     arr.sort((a, b) => a - b);
     r = i;
     c = j;
+    let ind = i === 0 ? r : c
     while(r < mat.length && c < mat[0].length){
-        mat[r][c] = side ? arr[r] : arr[c]
-        r++;
-        c++;
+        mat[r++][c++] = arr[ind++];
     }
     return mat;
 }
