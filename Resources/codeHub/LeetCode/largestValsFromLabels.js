@@ -19,7 +19,7 @@ var largestValsFromLabels = function(values, labels, num_wanted, use_limit) {
     };
     store.sort((a, b) => b[0] - a[0]);
     for(let num of store){
-        if(num_wanted === 0) return sum;
+        if(!num_wanted) return sum;
         set[num[1]] = (set[num[1]] || 0) + 1;
         if(set[num[1]] > use_limit) continue;
         sum += num[0];
