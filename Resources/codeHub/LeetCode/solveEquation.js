@@ -15,11 +15,8 @@ var solveEquation = function(equation) {
     const [lsv,lsc] = solve(left);
     const [rsv,rsc] = solve(right);
     const [variable,constant] = [lsv-rsv,rsc-lsc];
-    if(!variable){
-        if(lsc === rsc) return "Infinite solutions";
-        else return "No solution";
-    }
-    return `x=${constant / variable}`
+    return !variable ? (lsc === rsc ? "Infinite solutions":
+   "No solution") : `x=${constant / variable}`
 };
 
 const solve = equation => {
@@ -46,6 +43,6 @@ const solve = equation => {
             i = k;
         }
     }
-    return [x,num];
+    return [x,num]
 }
 solveEquation("55-3-124x-122x+96x-36+7x-72=6+x-2")
