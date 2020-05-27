@@ -6,8 +6,8 @@ LeetCode: 821. Shortest Distance to a Character
 
 var shortestToChar = function(S, C) {
     let prev = -Infinity
-    let indices = S.split('').map((el,i) => i).filter(i => S[i] ===C);
-    let res = [];
+    const indices = S.split('').map((el,i) => i).filter(i => S[i] ===C);
+    const res = [];
     let j = 0
     for(let i = 0; i < S.length; i++){
         if(i > indices[j] && j < indices.length - 1){
