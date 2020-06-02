@@ -14,11 +14,11 @@ var isNStraightHand = function(hand, W) {
         if(!map.has(h)) map.set(h, 1);
         else map.set(h, map.get(h) + 1)
     }
-    let values = Array.from(map.keys()).sort((a, b) => a - b);
-    let diff = values[1] - values[0];
+    const values = Array.from(map.keys()).sort((a, b) => a - b);
+    const diff = values[1] - values[0];
     for(let i = 0; i < values.length; i++){
         if(map.get(values[i]) === 0) continue;
-        let range = values[i + W - 1] - values[i] + 1;
+        const range = values[i + W - 1] - values[i] + 1;
         if(range !== W) return false;
         let count = 0;
         let k = i;
