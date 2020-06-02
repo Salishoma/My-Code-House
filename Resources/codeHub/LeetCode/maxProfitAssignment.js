@@ -19,15 +19,18 @@ var maxProfitAssignment = function(difficulty, profit, worker) {
             gain.set(difficulty[i], profit[i]);
         }
     }
-    difficulty.sort((a, b) => gain.get(b) - gain.get(a))
+    difficulty.sort((a, b) => gain.get(b) - gain.get(a));
+    worker.sort((a,b) => b - a)
     let total = 0;
+    let k = 0;
     for(let i = 0; i < worker.length; i++){
         let max = 0;
-        for(let j = 0; j < difficulty.length; j++){
+        for(let j = k; j < difficulty.length; j++){
             if(difficulty[j] <= worker[i]){
                 total += gain.get(difficulty[j]);
                 break;
-            }     
+            }
+            k++;     
         }
     }
     return total;
