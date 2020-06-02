@@ -24,7 +24,6 @@ var maxProfitAssignment = function(difficulty, profit, worker) {
     let total = 0;
     let k = 0;
     for(let i = 0; i < worker.length; i++){
-        let max = 0;
         for(let j = k; j < difficulty.length; j++){
             if(difficulty[j] <= worker[i]){
                 total += gain.get(difficulty[j]);
