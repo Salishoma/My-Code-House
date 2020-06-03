@@ -33,7 +33,7 @@ var advantageCount = function(A, B) {
             }
             if(j === k) j = k - 1;
             arr[key[j]] = A1[i];
-            map.delete(key[k])
+            map.delete(key[j])
             key.splice(j)
         }
     }
