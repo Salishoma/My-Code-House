@@ -14,13 +14,9 @@ var maxVowels = function(s, k) {
     let num = 0;
     let max = 0;
     for(let i = 0; i < s.length; i++){
-        if(num < k){
-            if(set.has(s[i])) count++;
-            num++;
-        }else{
-            if(set.has(s[i - num])) count--;
-            if(set.has(s[i])) count++;
-        }
+        if(num < k) num++;
+        else if(set.has(s[i - num])) count--;
+        if(set.has(s[i])) count++;
         max = Math.max(count, max);
     }
     return max;
