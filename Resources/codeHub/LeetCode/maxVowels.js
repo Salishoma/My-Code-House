@@ -10,9 +10,7 @@ LeetCode: 1456. Maximum Number of Vowels in a Substring of Given Length
 
 var maxVowels = function(s, k) {
     const set = new Set("aeiou");
-    let count = 0;
-    let num = 0;
-    let max = 0;
+    let [count, num, max] = [0, 0, 0];
     for(let i = 0; i < s.length; i++){
         if(num < k) num++;
         else if(set.has(s[i - num])) count--;
