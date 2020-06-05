@@ -9,9 +9,9 @@ LeetCode: 1465. Maximum Area of a Piece of Cake After Horizontal and Vertical Cu
 var maxArea = function(h, w, horizontalCuts, verticalCuts) {
     horizontalCuts.sort((a, b) => a - b);
     verticalCuts.sort((a, b) => a - b);
-    let MOD = 1000000007;
-    let hl = horizontalCuts.length;
-    let vl = verticalCuts.length;
+    const MOD = 1000000007;
+    const hl = horizontalCuts.length;
+    const vl = verticalCuts.length;
     let Hmax = Math.max(h - horizontalCuts[hl - 1], horizontalCuts[0]);
     let Vmax = Math.max(w - verticalCuts[vl - 1], verticalCuts[0]);
     for(let i = 1; i < Math.max(hl,vl); i++){
