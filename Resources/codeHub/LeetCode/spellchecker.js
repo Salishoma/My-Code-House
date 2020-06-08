@@ -46,8 +46,7 @@ var spellchecker = function(wordlist, queries) {
             let q = query.toLowerCase().replace(/a|e|i|o|u/g, "*");
             if (map.has(q))
                 arr.push(map.get(q).values().next().value);
-            else
-                arr.push('')
+            else arr.push('')
         }
     }
     return arr;
