@@ -17,16 +17,15 @@ LeetCode: 468. Validate IP Address
 */
 
 var validIPAddress = function(IP) {
-    const ip = IP.split(/:|\./);
+    const ip = IP.split(/:|\./); 
+    if(ip.length !==4 && ip.length !== 8) return "Neither";
     for(let valid of ip){
         if(ip.length === 4){
-            if(!/^[0-9]+$/.test(valid) || valid.length > 3 
-            || parseInt(valid)<0 || parseInt(valid)>255 
-            || (valid !== "0" && valid.startsWith("0"))) return "Neither";
+            if(!/^[0-9]+$/.test(valid) || parseInt(valid)<0 || parseInt(valid)>255 || (valid !== "0" && valid.startsWith("0"))) return "Neither";
             if(valid === "0") continue;
-        }else if(ip.length === 8){
+        }else{
             if(!/^[0-9a-fA-F]+$/.test(valid) || valid.length > 4) return "Neither";
-        }else return "Neither";
+        }
     }
     return ip.length === 4 ? "IPv4" : "IPv6"
 };
