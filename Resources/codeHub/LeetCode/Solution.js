@@ -37,7 +37,7 @@ Solution.prototype.pickIndex = function() {
         }
         if (this.index[mid][1] <= rand) {
             start = mid + 1;
-         }else if (this.index[mid][0] >= rand) {
+         }else{
             end = mid;
         }
         mid = Math.floor((start + end) / 2);
