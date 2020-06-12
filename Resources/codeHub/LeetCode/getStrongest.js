@@ -18,10 +18,7 @@ var getStrongest = function(arr, k) {
     const map = new Map();
     arr.sort((a, b) => b - a);
     let mid = Math.ceil((arr.length - 1) / 2);
-    for(let i = 0; i < arr.length; i++){
-        map.set(arr[i], Math.abs(arr[i] - arr[mid]));
-    }
-    arr.sort((a, b) => map.get(b) - map.get(a));
+    arr.sort((a, b) => Math.abs(b - arr[mid]) - Math.abs(a - arr[mid]));
     return arr.slice(0, k);
 };
 getStrongest([1,2,3,4,5],2)
