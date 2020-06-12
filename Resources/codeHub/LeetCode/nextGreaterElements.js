@@ -7,8 +7,8 @@ LeetCode: 503. Next Greater Element II
 */
 
 var nextGreaterElements = function(nums) {
-    let stack = [];
-    let ans = [];
+    const stack = [];
+    const ans = [];
     for (let i = 2 * nums.length - 1; i >= 0; i--) {
         while (stack.length > 0 && stack[stack.length-1] <= nums[i % nums.length]) {
             stack.pop();
