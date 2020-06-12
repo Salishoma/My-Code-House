@@ -14,11 +14,9 @@ For arr = [-7, 22, 17, 3], n = 4 and the median is obtained by sorting the arr
 LeetCode: 1471. The k Strongest Values in an Array
 */
 
-var getStrongest = function(arr, k) {
-    const map = new Map();
-    arr.sort((a, b) => b - a);
-    let mid = Math.ceil((arr.length - 1) / 2);
-    arr.sort((a, b) => Math.abs(b - arr[mid]) - Math.abs(a - arr[mid]));
-    return arr.slice(0, k);
+var getStrongest = function(arr,k) {
+    arr.sort((a,b) => b-a);
+    let mid=arr[Math.ceil((arr.length - 1) / 2)];
+    return arr.sort((a,b)=>Math.abs(b-mid)-Math.abs(a-mid)).slice(0,k);
 };
 getStrongest([1,2,3,4,5],2)
