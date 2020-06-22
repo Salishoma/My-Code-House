@@ -22,17 +22,15 @@ module.exports = ({ content }) => {
                     <a href=""><i class="fa fa-phone"></i>+081 640 57875</a>
                   </li>
                   <li>
-                    <a href=""><i class="fa fa-envelope"></i> abubakaroma91@yahoo.com</a>
+                    <a href="mailto: [abubakaroma91@yahoo.com]"><i class="fa fa-envelope"></i> Email me</a>
                   </li>
                 </ul>
               </div>
               <div>
                 <ul class="social">
-                  <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                  <li><a href="https://web.facebook.com/abubakar.oma"><i class="fab fa-facebook"></i></a></li>
                   <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                  <li><a href=""><i class="fab fa-linkedin"></i></a></li>
-                  <li><a href=""><i class="fab fa-dribbble"></i></a></li>
-                  <li><a href=""><i class="fab fa-google-plus"></i></a></li>
+                  <li><a href="https://www.linkedin.com/in/abubakar-oma-92042366/"><i class="fab fa-linkedin"></i></a></li>
                 </ul>
               </div>
             </div>
