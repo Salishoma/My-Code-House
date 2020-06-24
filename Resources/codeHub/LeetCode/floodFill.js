@@ -10,12 +10,11 @@ At the end, return the modified image.
 LeetCode:  Flood Fill
 */
 
+
 var floodFill = function(image, sr, sc, newColor) {
     const value = image[sr][sc];
     if(value === newColor) return image
     image[sr][sc] = newColor;
-    const seen = {};
-    seen[`${sr}#${sc}`] = value;
     const helper = (r, c) => {
         if(image[r]){
             if(image[r][c] === value){
