@@ -19,26 +19,26 @@
 //After removing the comments from the source code, return the source code in the same format.
 
 var removeComments = function(source) {
-    const set = new Set();
     const arr = [];
+    let comment = false;
     let s = "";
     for(let src of source){
         for(let i = 0; i < src.length; i++){
-            if(!set.has("/*")){
-                if(!set.has("/*") && src[i] === "/" && src[i + 1] === "*"){
-                    set.add("/*");
+            if(!comment){
+                if(src[i] === "/" && src[i + 1] === "*"){
+                    comment = true;
                     i++;
                 }else if(src[i] === "/" && src[i + 1] === "/"){
                     break;
                 }else s += src[i];
             }else{
                  if(src[i] === "*" && src[i + 1] === "/"){
-                     set.delete("/*")
+                     comment = false
                      i++;
                  }
             }
         }
-        if(s && !set.has("/*")){
+        if(s && !comment){
             arr.push(s);
             s = "";
         }
