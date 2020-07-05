@@ -9,20 +9,15 @@ LeetCode: 71. Simplify Path
 */
 
 var simplifyPath = function(path) {
-    const file = path.split("\/")
+    const file = path.split("/")
     let count = 0;
     let str = ""
     for(let i = file.length - 1; i >= 0; i--){
         if(file[i] === "." || file[i] === "") continue;
-        if(file[i] === ".."){
-            count++;
-            continue;
-        }
-        if(count){
-            count--;
-            continue
-        }
-        str = `/${file[i]}${str}`
+        if(file[i] === "..") count++;
+        else if(count) count--;
+        else str = `/${file[i]}${str}`
+        
     }
     return str ? str: "/";
 };
