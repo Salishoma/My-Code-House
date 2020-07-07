@@ -11,13 +11,12 @@ var groupThePeople = function(groupSizes) {
     const group = {};
     for(let i = 0; i < groupSizes.length; i++){
         if(!group[groupSizes[i]]){
-            group[groupSizes[i]] = [[], 0]
+            group[groupSizes[i]] = []
         }
-        group[groupSizes[i]][0].push(i);
-        group[groupSizes[i]][1] += 1;
-        if(group[groupSizes[i]][1] === groupSizes[i]){
-            arr.push(group[groupSizes[i]][0]);
-            delete group[groupSizes[i]];
+        group[groupSizes[i]].push(i);
+        if(group[groupSizes[i]].length === groupSizes[i]){
+            arr.push(group[groupSizes[i]]);
+            group[groupSizes[i]] = [];
         }
     }
     return arr;
