@@ -43,4 +43,4 @@ var rangeSum = function(nums, n, left, right) {
     }
     return sum;
 };
-rangeSum([2,4,9,2,2,4,2,2],8,6,6)
+rangeSum([2,4,9,2,2,4,2,3],8,6,6)
