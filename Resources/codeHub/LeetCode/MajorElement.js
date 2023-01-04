@@ -1,0 +1,45 @@
+/*
+Given an integer array of size n, find all elements that appear more than ⌊ n/3 ⌋ times.
+
+Note: The algorithm should run in linear time and in O(1) space.
+
+LeetCode: 229. Majority Element II
+*/
+
+var majorityElement = function(nums) {
+    const n = nums.length
+    if (n < 1) return []
+    if (n < 2) return nums
+    
+    let count1 = 0, count2 = 0, candidate1 = 0, candidate2 = 1
+    
+    for (let i = 0; i < n; i++) {
+        if (nums[i] == candidate1) count1++
+        else if (nums[i] == candidate2) count2++
+        else if (count1 == 0) {
+            candidate1 = nums[i]
+            count1 = 1
+        } 
+        else if (count2 == 0) {
+            candidate2 = nums[i]
+            count2 = 1
+        } else {
+            count1--
+            count2--
+        }
+    }
+    
+    let x = []
+    if (nums.count(candidate1) > n / 3) x.push(candidate1)
+    if (nums.count(candidate2) > n / 3) x.push(candidate2)
+        
+    return x
+};
+Array.prototype.count = function(num) {
+    let count = 0
+    for (let i = 0; i < this.length; i++)
+        if (this[i] == num) count++
+    
+    return count
+}
+majorityElement([1,1,1,3,3,2,2,2])
