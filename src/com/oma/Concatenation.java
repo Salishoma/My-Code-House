@@ -24,7 +24,7 @@ public class Concatenation {
         long res = 0;
 
         while (i < j) {
-            res = res + (nums[i++] *  (long) Math.pow(10, Math.floor(Math.log10(nums[j])) + 1) + nums[j--]);
+            res = res + (nums[i++] * (long) Math.pow(10, Math.floor(Math.log10(nums[j])) + 1) + nums[j--]);
         }
         return res + (nums.length % 2 == 0 ? 0 : nums[i]);
     }
